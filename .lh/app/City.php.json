@@ -1,0 +1,18 @@
+{
+    "sourceFile": "app/City.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1668675774348,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1668675774348,
+            "name": "Commit-0",
+            "content": "<?php\n\nnamespace App;\n\nuse Illuminate\\Database\\Eloquent\\Model;\n\nclass City extends Model\n{\n    //\n   protected $guarded=[];\n\n}\n"
+        }
+    ]
+}

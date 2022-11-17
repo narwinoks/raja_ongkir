@@ -1,0 +1,38 @@
+{
+    "sourceFile": "database/migrations/2022_11_17_090202_create_cities_table.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1668675838769,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1668675845168,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n     public function up()\n     {\n         Schema::create('cities', function (Blueprint $table) {\n             $table->id();\n-            $table->\n+            $table->unsignedBigInteger('')\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1668675852453,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n     public function up()\n     {\n         Schema::create('cities', function (Blueprint $table) {\n             $table->id();\n-            $table->unsignedBigInteger('')\n+            $table->unsignedBigInteger('code')\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1668675861169,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,10 @@\n     public function up()\n     {\n         Schema::create('cities', function (Blueprint $table) {\n             $table->id();\n-            $table->unsignedBigInteger('code')\n+            $table->unsignedBigInteger('code');\n+            $table->string('tit')\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1668675881964,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,10 @@\n     {\n         Schema::create('cities', function (Blueprint $table) {\n             $table->id();\n             $table->unsignedBigInteger('code');\n-            $table->string('tit')\n+            $table->string('title');\n+\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1668675894050,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,9 @@\n         Schema::create('cities', function (Blueprint $table) {\n             $table->id();\n             $table->unsignedBigInteger('code');\n             $table->string('title');\n+            $table->unsignedBigInteger('province');\n \n             $table->timestamps();\n         });\n     }\n"
+                }
+            ],
+            "date": 1668675838769,
+            "name": "Commit-0",
+            "content": "<?php\n\nuse Illuminate\\Database\\Migrations\\Migration;\nuse Illuminate\\Database\\Schema\\Blueprint;\nuse Illuminate\\Support\\Facades\\Schema;\n\nclass CreateCitiesTable extends Migration\n{\n    /**\n     * Run the migrations.\n     *\n     * @return void\n     */\n    public function up()\n    {\n        Schema::create('cities', function (Blueprint $table) {\n            $table->id();\n            $table->\n            $table->timestamps();\n        });\n    }\n\n    /**\n     * Reverse the migrations.\n     *\n     * @return void\n     */\n    public function down()\n    {\n        Schema::dropIfExists('cities');\n    }\n}\n"
+        }
+    ]
+}

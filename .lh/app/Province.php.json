@@ -1,0 +1,22 @@
+{
+    "sourceFile": "app/Province.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1668675755442,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1668675762893,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,6 +5,6 @@\n use Illuminate\\Database\\Eloquent\\Model;\n \n class Province extends Model\n {\n-   pro\n+   protected $guarded=[]\n }\n"
+                }
+            ],
+            "date": 1668675755442,
+            "name": "Commit-0",
+            "content": "<?php\n\nnamespace App;\n\nuse Illuminate\\Database\\Eloquent\\Model;\n\nclass Province extends Model\n{\n   pro\n}\n"
+        }
+    ]
+}

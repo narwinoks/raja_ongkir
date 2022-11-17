@@ -1,0 +1,26 @@
+{
+    "sourceFile": "database/migrations/2022_11_17_090151_create_provinces_table.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1668675796073,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1668675802144,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n     public function up()\n     {\n         Schema::create('provinces', function (Blueprint $table) {\n             $table->id();\n-            $table->un\n+            $table->unsignedBigInteger('code')\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1668675821689,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,10 @@\n     public function up()\n     {\n         Schema::create('provinces', function (Blueprint $table) {\n             $table->id();\n-            $table->unsignedBigInteger('code')\n+            $table->unsignedBigInteger('code');\n+            $table->string('title');\n             $table->timestamps();\n         });\n     }\n \n"
+                }
+            ],
+            "date": 1668675796073,
+            "name": "Commit-0",
+            "content": "<?php\n\nuse Illuminate\\Database\\Migrations\\Migration;\nuse Illuminate\\Database\\Schema\\Blueprint;\nuse Illuminate\\Support\\Facades\\Schema;\n\nclass CreateProvincesTable extends Migration\n{\n    /**\n     * Run the migrations.\n     *\n     * @return void\n     */\n    public function up()\n    {\n        Schema::create('provinces', function (Blueprint $table) {\n            $table->id();\n            $table->un\n            $table->timestamps();\n        });\n    }\n\n    /**\n     * Reverse the migrations.\n     *\n     * @return void\n     */\n    public function down()\n    {\n        Schema::dropIfExists('provinces');\n    }\n}\n"
+        }
+    ]
+}
